@@ -92,7 +92,7 @@ function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
 
   moon.rotation.x += 0.05;
-  moon.rotation.y += 0.075;
+  moon.rotation.y += 0.0756;
   moon.rotation.z += 0.05;
  
   abhi.rotation.y  += 0.01;
@@ -107,16 +107,15 @@ document.body.onscroll = moveCamera
 
 
 //Resize (responsiveness)
-// window.addEventListener("resize",() => {
-  //update size
-  // sizes.width = window.innerWidth,
-  // sizes.height = window.innerHeight
+window.addEventListener("resize",() => {
+  // update size
+   window.innerWidth, window.innerHeight
 
-  //update camera
-//   camera.aspect = sizes.width / sizes.height;
-//   camera.updateProjectionMatrix();
-//   renderer.setSize(sizes.width, sizes.height);
-// })
+  // update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(sizes.width, sizes.height);
+})
 
 
 //animate 
@@ -125,6 +124,10 @@ function animate(){
   torus.rotation.x += 0.01;
   torus.rotation.y +=  +0.005;
   torus.rotation.z += +0.01;
+
+  abhi.rotation.x += 0.001;
+  abhi.rotation.y  += 0.001;
+  abhi.rotation.z  += 0.001;
   renderer.render(scene,camera)
 }
 
