@@ -48,7 +48,7 @@ canvas {
 
   header {
     background: var(--dark-bg);
-    grid-column: 2 / span 5;
+    grid-column: 2 /span 6;
     font-family: lexend;
     font-size: 2.5rem;
     padding: 1rem;
@@ -94,4 +94,8 @@ canvas {
   .left {
     grid-column: 6 / 12;
     border-radius: 12px;
+  }
+
+  #project {
+    grid-column: 6 / 12;
   }
